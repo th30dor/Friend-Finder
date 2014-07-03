@@ -1,13 +1,13 @@
 {
   "files": [
     {
-      "downloadUrl": "/downloads/messageEndpoint/v1/20140219150559/java/1.16.0-rc/friendidentifier.teo-messageEndpoint-v1-20140219150559-java-1.16.0-rc-sources.jar", 
-      "path": "friendidentifier.teo-messageEndpoint-v1-20140219150559-java-1.16.0-rc-sources.jar", 
+      "downloadUrl": "/downloads/messageEndpoint/v1/20140304113211/java/1.16.0-rc/friendidentifier.teo-messageEndpoint-v1-20140304113211-java-1.16.0-rc-sources.jar", 
+      "path": "friendidentifier.teo-messageEndpoint-v1-20140304113211-java-1.16.0-rc-sources.jar", 
       "type": "source", 
-      "timestamp": "2014-02-19 15:05"
+      "timestamp": "2014-03-04 11:32"
     }, 
     {
-      "path": "friendidentifier.teo-messageEndpoint-v1-20140219150559-java-1.16.0-rc.jar.properties", 
+      "path": "friendidentifier.teo-messageEndpoint-v1-20140304113211-java-1.16.0-rc.jar.properties", 
       "type": "android.properties"
     }
   ], 
@@ -701,5 +701,5 @@
   "version": "v1", 
   "language_version": "1.16.0-rc", 
   "id": "messageEndpoint:v1", 
-  "revision": 20140219150559
+  "revision": 20140304113211
 }

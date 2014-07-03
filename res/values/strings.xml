@@ -2,14 +2,14 @@
 <resources>
 
     <string name="app_name">Friend Identifier</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Set Name</string>
     <string name="hello_world">Hello world!</string>
     
-    <string name="button1">Friend 1</string>
-    <string name="button2">Friend 2</string>
-    <string name="button3">Friend 3</string>
-    <string name="button4">Friend 4</string>
-    <string name="button5">Friend 5</string>
+    <string name="button1">Bartosz</string>
+    <string name="button2">Ferdinando</string>
+    <string name="button3">Harri</string>
+    <string name="button4">Magda</string>
+    <string name="button5">Rafa</string>
     
     <string name="warning_message">Data Saved</string>
     <string name="ok_button">OK</string>

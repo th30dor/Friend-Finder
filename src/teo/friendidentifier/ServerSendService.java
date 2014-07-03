@@ -40,7 +40,7 @@ public class ServerSendService extends IntentService {
 			return false;
 	}
 
-	public void sendToServer(String s){
+	public boolean sendToServer(String s, String ownerName, String dateTime){
 
 		Dataentityendpoint.Builder endpointBuilder = new Dataentityendpoint.Builder(
 				AndroidHttp.newCompatibleTransport(),
@@ -52,15 +52,16 @@ public class ServerSendService extends IntentService {
 				endpointBuilder).build();
 		try {
 			DataEntity note = new DataEntity().setFriend(s);
-		    note.setOwner("Teo");
+		    note.setOwner(ownerName);
 		    
-		    String noteID = new Date().toString();
-	        note.setId(noteID);
+		    note.setId(dateTime);
 		    
         
 			DataEntity result = endpoint.insertDataEntity(note).execute();
+			return true;
 		} catch (IOException e) {
 			e.printStackTrace();
+			return false;
 		}
 
 
@@ -73,6 +74,8 @@ public class ServerSendService extends IntentService {
 		// Gets data from the incoming Intent
 
 		String dataString = workIntent.getStringExtra("teo.friendidentifier.id");
+		String ownerName= workIntent.getStringExtra("teo.friendidentifier.ownerName");
+		String dateTime= workIntent.getStringExtra("teo.friendidentifier.time");
 
 		boolean done = false;
 
@@ -85,8 +88,8 @@ public class ServerSendService extends IntentService {
 			//if already connected to the internet
 			if (isConnectedToWiFI()){
 
-				sendToServer(s);
-				done = true;
+				done = sendToServer(s,ownerName,dateTime);
+				 
 			}
 			//or else, wait for connection to begin
 			else{
